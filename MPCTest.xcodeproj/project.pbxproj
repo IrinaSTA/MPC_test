@@ -13,6 +13,8 @@
 		B1908C5B21C2A74D00B2AFD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1908C5A21C2A74D00B2AFD7 /* Assets.xcassets */; };
 		B1908C5E21C2A74D00B2AFD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1908C5C21C2A74D00B2AFD7 /* LaunchScreen.storyboard */; };
 		B1908C6921C2A74D00B2AFD7 /* MPCTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1908C6821C2A74D00B2AFD7 /* MPCTestTests.swift */; };
+		B1908C7421C2A89100B2AFD7 /* MPCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1908C7321C2A89100B2AFD7 /* MPCManager.swift */; };
+		B1908C7621C2AC9400B2AFD7 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1908C7521C2AC9400B2AFD7 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		B1908C6421C2A74D00B2AFD7 /* MPCTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MPCTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1908C6821C2A74D00B2AFD7 /* MPCTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPCTestTests.swift; sourceTree = "<group>"; };
 		B1908C6A21C2A74D00B2AFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1908C7321C2A89100B2AFD7 /* MPCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPCManager.swift; sourceTree = "<group>"; };
+		B1908C7521C2AC9400B2AFD7 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				B1908C5A21C2A74D00B2AFD7 /* Assets.xcassets */,
 				B1908C5C21C2A74D00B2AFD7 /* LaunchScreen.storyboard */,
 				B1908C5F21C2A74D00B2AFD7 /* Info.plist */,
+				B1908C7321C2A89100B2AFD7 /* MPCManager.swift */,
+				B1908C7521C2AC9400B2AFD7 /* Device.swift */,
 			);
 			path = MPCTest;
 			sourceTree = "<group>";
@@ -199,6 +205,8 @@
 			files = (
 				B1908C5621C2A74C00B2AFD7 /* ViewController.swift in Sources */,
 				B1908C5421C2A74C00B2AFD7 /* AppDelegate.swift in Sources */,
+				B1908C7421C2A89100B2AFD7 /* MPCManager.swift in Sources */,
+				B1908C7621C2AC9400B2AFD7 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

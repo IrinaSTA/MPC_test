@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93E7780721C2CD1300A2F48B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E7780621C2CD1300A2F48B /* Message.swift */; };
 		B1908C5421C2A74C00B2AFD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1908C5321C2A74C00B2AFD7 /* AppDelegate.swift */; };
 		B1908C5621C2A74C00B2AFD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1908C5521C2A74C00B2AFD7 /* ViewController.swift */; };
 		B1908C5921C2A74C00B2AFD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1908C5721C2A74C00B2AFD7 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93E7780621C2CD1300A2F48B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B1908C5021C2A74C00B2AFD7 /* MPCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1908C5321C2A74C00B2AFD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1908C5521C2A74C00B2AFD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				B1908C5F21C2A74D00B2AFD7 /* Info.plist */,
 				B1908C7321C2A89100B2AFD7 /* MPCManager.swift */,
 				B1908C7521C2AC9400B2AFD7 /* Device.swift */,
+				93E7780621C2CD1300A2F48B /* Message.swift */,
 			);
 			path = MPCTest;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				B1908C5621C2A74C00B2AFD7 /* ViewController.swift in Sources */,
 				B1908C5421C2A74C00B2AFD7 /* AppDelegate.swift in Sources */,
+				93E7780721C2CD1300A2F48B /* Message.swift in Sources */,
 				B1908C7421C2A89100B2AFD7 /* MPCManager.swift in Sources */,
 				B1908C7621C2AC9400B2AFD7 /* Device.swift in Sources */,
 			);
@@ -367,12 +371,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q83P95D43Q;
 				INFOPLIST_FILE = MPCTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.IrinaBaldwin.MPCTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chriscooksley.MPCTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -384,12 +389,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q83P95D43Q;
 				INFOPLIST_FILE = MPCTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.IrinaBaldwin.MPCTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chriscooksley.MPCTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

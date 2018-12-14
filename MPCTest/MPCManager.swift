@@ -13,6 +13,10 @@ class MPCManager: NSObject {
     var advertiser: MCNearbyServiceAdvertiser!
     var browser: MCNearbyServiceBrowser!
     
+    struct Notifications {
+        static let deviceDidChangeState = Notification.Name("deviceDidChangeState")
+    }
+    
     static let instance = MPCManager()
     
     let localPeerID: MCPeerID
@@ -49,7 +53,30 @@ class MPCManager: NSObject {
         self.devices.append(device)
         return device
     }
+    
+    func start() {
+        self.advertiser.startAdvertisingPeer()
+        self.browser.startBrowsingForPeers()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(enteredBackground), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
+    }
+    
+    @objc func enteredBackground() {
+        for device in self.devices {
+            device.disconnect()
+        }
+    }
+    
 }
+
+extension MPCManager {
+    var connectedDevices: [Device] {
+        return self.devices.filter { $0.state == .connected }
+    }
+}
+
+
+
 // Advertiser look for a browser, and if it has received an invitation, then joins the session
 extension MPCManager: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
@@ -63,5 +90,10 @@ extension MPCManager: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         let device = MPCManager.instance.device(for: peerID)
         device.invite(with: self.browser)
+    }
+    
+    func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
+        let device = MPCManager.instance.device(for: peerID)
+        device.disconnect()
     }
 }
